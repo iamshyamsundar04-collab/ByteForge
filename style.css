@@ -1,0 +1,136 @@
+/* ============ style.css - shared by all pages ============ */
+
+/* 1. Colours kept in one place so they are easy to change */
+:root {
+  --ink: #14263a;        /* dark navy for text and header */
+  --paper: #f5f7fa;      /* page background */
+  --white: #ffffff;
+  --accent: #0e7c6b;     /* teal for buttons */
+  --accent-dark: #0a5c4f;
+  --line: #d6dde5;       /* borders */
+  --warn: #b45309;       /* amber for safety */
+  --danger: #b42318;     /* red for errors / booked */
+}
+
+/* 2. Basic reset */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+}
+h1, h2, h3 { line-height: 1.25; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #f5b301;
+  outline-offset: 2px;
+}
+
+/* 3. Header and navigation */
+header { background: var(--ink); color: var(--white); padding: 14px 20px; }
+.header-inner {
+  max-width: 1100px; margin: auto;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 8px;
+}
+.logo { font-size: 1.4rem; font-weight: 700; color: var(--white); text-decoration: none; }
+nav a { color: #cfe3f2; text-decoration: none; margin-left: 18px; }
+nav a:hover, nav a.active { color: var(--white); border-bottom: 2px solid var(--white); }
+
+/* 4. Page container */
+main { max-width: 1100px; margin: auto; padding: 24px 20px 50px; }
+
+/* 5. Home page intro */
+.intro { padding: 10px 0 20px; }
+.intro h1 { font-size: 2rem; margin: 0 0 8px; }
+.intro p { max-width: 70ch; margin: 0; }
+
+/* 6. Filters (lab buttons + search box) */
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 20px; }
+.filters button {
+  padding: 8px 16px; border: 1px solid var(--line); background: var(--white);
+  border-radius: 20px; cursor: pointer; font-size: 1rem; color: var(--ink);
+}
+.filters button.active { background: var(--ink); color: var(--white); border-color: var(--ink); }
+.filters input {
+  margin-left: auto; padding: 8px 12px; border: 1px solid var(--line);
+  border-radius: 6px; font-size: 1rem; min-width: 220px;
+}
+
+/* 7. Equipment cards grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.card {
+  background: var(--white); border: 1px solid var(--line); border-radius: 8px;
+  padding: 16px; display: flex; flex-direction: column;
+}
+.card h3 { margin: 6px 0; font-size: 1.1rem; }
+.card p { margin: 0 0 14px; font-size: 0.95rem; flex: 1; }
+.lab-tag {
+  align-self: flex-start; font-size: 0.8rem; padding: 2px 10px;
+  border-radius: 12px; color: var(--white);
+}
+.lab-Physics { background: #2f6fb3; }
+.lab-Electronics { background: #7a4fb3; }
+.lab-Mechanical { background: #a8561c; }
+.lab-IoT { background: #0e7c6b; }
+.empty { padding: 30px; text-align: center; color: #5b6b7b; }
+
+/* 8. Buttons */
+.btn {
+  display: inline-block; padding: 10px 20px; background: var(--accent); color: var(--white);
+  text-decoration: none; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem;
+}
+.btn:hover { background: var(--accent-dark); }
+.btn-outline { background: var(--white); color: var(--ink); border: 1px solid var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--white); }
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+
+/* 9. Equipment detail page */
+.detail-box { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 22px; }
+.detail-box h1 { margin-top: 4px; }
+.sections { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-top: 18px; }
+.section { border: 1px solid var(--line); border-radius: 6px; padding: 14px 18px; }
+.section h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.section ul, .section ol { margin: 0; padding-left: 20px; }
+.section.safety { border-left: 5px solid var(--warn); background: #fff8ef; }
+.section.safety h3 { color: var(--warn); }
+
+/* 10. Booking page */
+.booking-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.panel { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 20px; }
+.panel h2 { margin-top: 0; }
+label { display: block; margin: 14px 0 4px; font-weight: 600; }
+input[type="text"], input[type="date"], select {
+  width: 100%; padding: 9px 10px; border: 1px solid var(--line); border-radius: 6px; font-size: 1rem;
+}
+.check-row { display: flex; align-items: center; gap: 8px; margin-top: 16px; }
+.check-row input { width: 20px; height: 20px; }
+.check-row label { margin: 0; font-weight: normal; }
+
+.slots { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.slot {
+  padding: 12px; border: 2px solid var(--accent); background: var(--white);
+  border-radius: 6px; cursor: pointer; font-size: 1rem; color: var(--ink);
+}
+.slot:hover { background: #e6f4f1; }
+.slot.selected { background: var(--accent); color: var(--white); }
+.slot:disabled { border-color: var(--line); background: #eceff3; color: #8a96a3; cursor: not-allowed; }
+
+.message { margin-top: 14px; padding: 10px 14px; border-radius: 6px; display: none; }
+.message.error { display: block; background: #fdecea; color: var(--danger); border: 1px solid #f3b8b2; }
+.message.success { display: block; background: #e6f4ea; color: #1e6b3a; border: 1px solid #a6d6b5; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; font-size: 0.95rem; }
+th { background: #eaf0f6; }
+.table-wrap { overflow-x: auto; }
+.cancel-btn { background: var(--danger); color: var(--white); border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; }
+
+footer { text-align: center; padding: 18px; color: #5b6b7b; font-size: 0.9rem; }
+
+/* 11. Mobile layout */
+@media (max-width: 800px) {
+  .booking-layout { grid-template-columns: 1fr; }
+  .filters input { margin-left: 0; width: 100%; }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Slot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">ByteForge Labs</a>
+      <nav>
+        <a href="index.html">Equipment</a>
+        <a href="booking.html" class="active">Book a Slot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Book Your Slot</h1>
+
+    <div class="booking-layout">
+      <!-- LEFT: the booking form -->
+      <section class="panel">
+        <h2>1. Choose equipment, date and slot</h2>
+
+        <label for="equipment">Equipment</label>
+        <select id="equipment"></select>
+
+        <label for="date">Date (next 14 days)</label>
+        <input type="date" id="date">
+
+        <label>2-hour slot</label>
+        <div class="slots" id="slots"></div>
+
+        <h2 style="margin-top:24px">2. Verify yourself</h2>
+
+        <label for="studentName">Student name</label>
+        <input type="text" id="studentName" placeholder="Your full name">
+
+        <label for="rollNo">Roll number (8 digits)</label>
+        <input type="text" id="rollNo" maxlength="8" placeholder="e.g. 12345678">
+
+        <div class="check-row">
+          <input type="checkbox" id="approval">
+          <label for="approval">My project guide has approved this booking</label>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="btn-row">
+          <button class="btn" id="bookBtn" type="button">Confirm booking</button>
+        </div>
+      </section>
+
+      <!-- RIGHT: list of saved bookings -->
+      <section class="panel">
+        <h2>My bookings</h2>
+        <div class="table-wrap" id="bookingList"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>ByteForge - Internet Programming Project</footer>
+
+  <script src="data.js"></script>
+  <script src="booking.js"></script>
+</body>
+</html>

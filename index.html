@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ByteForge - Lab Equipment Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="index.html">ByteForge Labs</a>
+      <nav>
+        <a href="index.html" class="active">Equipment</a>
+        <a href="booking.html">Book a Slot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>College Science and Engineering Lab Equipment Booking System</h1>
+      <p>Find equipment from the Physics, Electronics, Mechanical and IoT labs, read its safety rules, and reserve a 2-hour slot from one single place.</p>
+    </section>
+
+    <!-- Lab filter buttons and search box -->
+    <section class="filters" id="filters">
+      <button data-lab="All" class="active">All Labs</button>
+      <button data-lab="Electronics">Electronics</button>
+      <button data-lab="Physics">Physics</button>
+      <button data-lab="Mechanical">Mechanical</button>
+      <button data-lab="IoT">IoT</button>
+      <input type="text" id="searchBox" placeholder="Search equipment..." aria-label="Search equipment">
+    </section>
+
+    <!-- Cards are added here by catalog.js -->
+    <section class="grid" id="catalog"></section>
+  </main>
+
+  <footer>ByteForge - Internet Programming Project</footer>
+
+  <script src="data.js"></script>
+  <script src="catalog.js"></script>
+</body>
+</html>
