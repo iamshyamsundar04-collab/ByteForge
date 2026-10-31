@@ -142,11 +142,12 @@ Each item links to a manual, datasheet or procedure page. Some are manufacturer 
 
 | Member | Role | Responsibility |
 | --- | --- | --- |
-| Shyam Sundar(12623715) | Team lead, JavaScript developer, DevOps and Deployment Manager | Project plan, booking logic, slot checking and roll number validation (`booking.js`),Equipment data and detail card page: specs, usage steps, safety (data.js, detail.js), catalog cards, lab filters and search (catalog.js), Create and manage the GitHub repository, Handle branches, merges and pull requests, Resolve merge conflicts, Deploy the site to Vercel and check it after each update, Manage the README and project documentation|
-|Krish(12622956)| Frontend developer | Home page, equipment card page and slot booking page (index.html, equipment.html, Booking.html) and video preparation for project |
+| Shyam Sundar(12623715) | Team lead, JavaScript developer, DevOps and Deployment Manager | Project plan, booking logic, slot checking and roll number validation (`booking.js`),Equipment data and detail card page: specs, usage steps, safety (`data.js`,` detail.js`), catalog cards, lab filters and search (`catalog.js`), Create and manage the GitHub repository, Handle branches, merges and pull requests, Resolve merge conflicts, Deploy the site to Vercel and check it after each update, Manage the README and project documentation|
+|Krish(12622956)| Frontend developer | Home page, equipment card page and slot booking page (`index.html`, `equipment.html`, `Booking.html`) and video preparation for project |
 |Aryan(12622305)| UI designer and tester | Styling, mobile layout, testing all pages and preparing the PPT (`style.css`) |
 
-
+## Versel deployment
+-You can also check it online on versel deployment link : https://byteforge-bay-alpha.vercel.app/
 
 ---
 
